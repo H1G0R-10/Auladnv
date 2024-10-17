@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.fundo-preto{
+background-color: black;
+min-height: 100vh;
+}
+.fundo-branco{
+background-color: white;
+min-height: 100vh;
+
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
