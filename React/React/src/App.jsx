@@ -9,6 +9,7 @@ export default function App(){
   const [count, setCount] = useState(0)
   const [titulo, setTitulo] = useState(true)
   const [senai, setSenai] = useState("") 
+  const [like, setLike] = useState(true) 
 
   if(senai == "SENAI" || senai == "senai" || senai == "Senai") {
     var sim='Apareci'
@@ -16,6 +17,18 @@ export default function App(){
   
   return (
     <>
+
+        
+        <button onClick={() => setLike(like ? false : true)}>❤</button>
+        {like ?
+        <div>
+          1
+        </div>
+
+        : <div>   
+          0
+        </div>
+        }
 
         <div className="card">
         <button onClick={() => setCount((count) => count + 10)}>Adicionar {count}</button>
