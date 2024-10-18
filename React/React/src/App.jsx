@@ -9,10 +9,11 @@ export default function App(){
   const [count, setCount] = useState(0)
   const [titulo, setTitulo] = useState(true)
   const [senai, setSenai] = useState("") 
+
+  if(senai == "SENAI" || senai == "senai" || senai == "Senai") {
+    var sim='Apareci'
+}
   
-
-
-
   return (
     <>
 
@@ -32,26 +33,11 @@ export default function App(){
 
         : <div></div>
         }
-        <button onClick={() => setSenai(senai ? false : true)}>ver</button>
-        {senai ?
-
-        <div>
-          <input type="text" onChange={(e) => setSenai(e.target.value = "senai")}/>
-          <h1>Apareci!</h1>
-
-        </div>
-
-        : <div>
-          <input type="text" onChange={(e) => setSenai(e.target.value)}/>
-
-        </div>
-        }
+        <div className='sumir'>
+      <input type="text" onChange={(e) => setSenai(e.target.value)} />
+      <h1>{senai}{sim}</h1>
+      </div>
         
-
-
-
-
-
 
         {/* <button onClick={() => setTheme(theme ? false : true)}>TROCAR A COR DO FUNDO</button>
         {theme ?
@@ -66,8 +52,7 @@ export default function App(){
         <input type="text" onChange={(e) => setName(e.target.value)}/>
         </div>
         }  */}
-        
-       
+         
     </>
   )
 }
