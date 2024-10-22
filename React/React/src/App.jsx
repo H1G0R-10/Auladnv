@@ -9,7 +9,10 @@ export default function App(){
   const [count, setCount] = useState(0)
   const [titulo, setTitulo] = useState(true)
   const [senai, setSenai] = useState("") 
-  const [like, setLike] = useState(true) 
+  const [like, setLike] = useState(true)
+  const [caracter, setCaracter] = useState("") 
+
+
 
   if(senai == "SENAI" || senai == "senai" || senai == "Senai") {
     var sim='Apareci'
@@ -18,15 +21,18 @@ export default function App(){
   return (
     <>
 
-        
+        <div><input type="text" onChange={(e) => setCaracter(e.target.value)} />
+        </div>
+       <div>{caracter.length}</div>
+
         <button onClick={() => setLike(like ? false : true)}>❤</button>
         {like ?
         <div>
-          1
+          0
         </div>
 
         : <div>   
-          0
+          1
         </div>
         }
 
@@ -46,7 +52,7 @@ export default function App(){
 
         : <div></div>
         }
-        <div className='sumir'>
+      <div>
       <input type="text" onChange={(e) => setSenai(e.target.value)} />
       <h1>{senai}{sim}</h1>
       </div>
